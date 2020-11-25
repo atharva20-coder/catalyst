@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Four Features Cards w/Flexbox</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: hsl(234, 12%, 34%);
+  background-color: hsl(0, 0%, 98%);
+  padding: 30px 0 30px;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2rem;
+} 
+
+header h1 span {
+  font-weight: 200;
+}
+
+header p {
+  padding: 20px 0;
+  font-size: .9rem;
+}
+
+section {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .flex-col {
+  padding: 15px;
+}
+
+section .flex-col .cards {
+  max-width: 380px;
+  height: 255px;
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  box-shadow: 1px 3px 12px 1px hsl(229, 6%, 66%);
+}
+
+section .flex-col .cards h3 {
+  font-size: 1.5rem;
+}
+
+section .flex-col .cards p {
+  margin-top: 10px;
+  line-height: 2;
+}
+
+section .flex-col .cards img {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+section .one {
+  border-top: 5px hsl(180, 62%, 55%) solid;
+}
+
+section .two {
+  border-top: 5px hsl(0, 78%, 62%) solid;
+}
+
+section .three {
+  border-top: 5px hsl(34, 97%, 64%) solid;
+}
+
+section .four {
+  border-top: 5px hsl(212, 86%, 64%) solid;
+}
+
+@media (max-width: 960px) {
+  section {
+    flex-direction: column;
+  }
+
+  section .flex-col {
+    padding: 0 40px;
+  }
+
+  header {
+    padding: 0 45px 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Document</title>
+</head>
+<body>
+<main>
+<header>
+<h1><span>Reliable, efficient delivery</span></h1>
+<h1>Powered by Technology</h1>
+<p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+</header>
+<section>
+
+<div class="flex-col">
+<div class="cards one">
+<h3>Supervisor</h3>
+<p>Monitors activity to identify project roadblocks</p>
+<img src="https://dl.dropboxusercontent.com/s/2dwy0gnsh85ihrh/icon-supervisor.svg?dl=0" alt="Monitor project activity for roadblocks">
+</div>
+</div>
+
+<div class="flex-col">
+<div class="cards two">
+<h3>Team Builder</h3>
+<p>Scans our talent network to create this optimal team for your project</p>
+<img src="https://dl.dropboxusercontent.com/s/4dakor36j5x45e6/icon-team-builder.svg?dl=0" alt="Build your team using our network">
+</div>
+<div class="cards three">
+<h3>Karma</h3>
+<p>Regularly evaluates our talent to ensure quality</p>
+<img src="https://dl.dropboxusercontent.com/s/t4vx05s5rlseqgo/icon-karma.svg?dl=0" alt="Evaluates our talent for quality">
+</div>
+</div>
+
+<div class="flex-col">
+<div class="cards four">
+<h3>Calculator</h3>
+<p>Uses data from past projects to provide better delivery estimates</p>
+<img src="https://dl.dropboxusercontent.com/s/dpx788lch6gq75f/icon-calculator.svg" alt="Calculates past data for better estimating">
+</div>
+</div>
+</section>
+</main>
+</body>
+</html>
+</body>
+</html>

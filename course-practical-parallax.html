@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Space Rocket Parallax</title>
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: inherit;
+}
+
+.section-1 .back {
+  position: absolute;
+  height: 110%;
+  width: 100%;
+  z-index: -100;
+  object-fit: cover;
+  object-position: right;
+}
+.section-1 .planets {
+  width: 100%;
+  display: flex;
+}
+.section-1 .planets .col {
+  width: 50%;
+}
+.section-1 .planets .col img {
+  position: relative;
+  width: 100%;
+}
+.section-1 p {
+  margin-top: -70px;
+  font-family: verdana;
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 3px 7px #180357;
+}
+.section-1 .rocket {
+  position: relative;
+}
+.section-1 .rocket img {
+  width: 100%;
+}
+
+.section-2 {
+  position: absolute;
+  width: 100%;
+  bottom: -185px;
+}
+.section-2 h2 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.card-concept {
+  width: 250px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -5px rgba(153, 141, 240, 0.3);
+  padding: 0.5rem 0.3rem;
+  margin: 0 20px 8px;
+}
+.card-concept img {
+  padding: 0.3rem 0.8rem;
+  margin-right: 10px;
+  border-radius: 8px;
+  float: left;
+  width: 100px;
+  color: #fff;
+}
+
+.container {
+  width: 95%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (max-width: 740px) and (min-width: 501px) {
+  .section-1 .rocket {
+    position: absolute;
+    bottom: -145px;
+  }
+
+  p {
+    margin-top: -30px !important;
+  }
+}
+@media (max-width: 500px) {
+  .section-1 .back {
+    height: 90%;
+  }
+  .section-1 .rocket {
+    position: absolute;
+    bottom: -10px;
+  }
+
+  .planets {
+    padding-top: 50px;
+  }
+
+  p {
+    margin-top: 0px !important;
+  }
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<section class="section-1">
+<img class="back rellax" data-rellax-speed="-1" src="https://gatoledo.com/proj-codepen/background.jpg">
+<div class="planets rellax" data-rellax-speed="-2">
+<div class="col">
+<img src="https://gatoledo.com/proj-codepen/planets1.png">
+</div>
+<div class="col">
+<img src="https://gatoledo.com/proj-codepen/planets2.png">
+</div>
+</div>
+<p>Rocket Parallax</p>
+<div class="rocket" id="rocket">
+
+</div>
+</section>
+<section class="section-2">
+<div class="container rellax" data-rellax-speed="-1">
+<div class="row">
+<div class="card-concept">
+<img src="https://gatoledo.com/proj-codepen/um.png">
+<h4>Lorem ipsum dolor</h4>
+<small>Lorem ipsum</small>
+</div>
+<div class="card-concept">
+<img src="https://gatoledo.com/proj-codepen/dois.png">
+<h4>Lorem ipsum dolor</h4>
+<small>Lorem ipsum</small>
+</div>
+<div class="card-concept">
+<img src="https://gatoledo.com/proj-codepen/tres.png">
+<h4>Lorem ipsum dolor</h4>
+<small>Lorem ipsum</small>
+</div>
+</div>
+</div>
+<h2 class="rellax" data-rellax-speed="-2">Parallax create with Rellax.js</h2>
+</section>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js'></script>
+<script id="rendered-js">
+var width = window.innerWidth;
+
+if (width > 767) {
+  var speed =
+  '<img class="rellax" data-rellax-speed="2" src="https://gatoledo.com/proj-codepen/rocket1.png">';
+  document.getElementById("rocket").innerHTML = speed;
+} else {
+  var speed = '<img src="https://gatoledo.com/proj-codepen/rocket1.png">';
+  document.getElementById("rocket").innerHTML = speed;
+}
+
+//START RELLAX.JS
+var rellax = new Rellax(".rellax");
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>

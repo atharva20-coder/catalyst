@@ -1,0 +1,2395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-yellow.css">
+        
+        <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"><\/script>')</script>
+        <script>
+function openWin() {
+  window.open("courseslog.html");
+}
+</script>
+        
+<style>
+    /* THEMES */
+    
+.w3-theme-l5 {color:#000 !important; background-color:#dfe5e8 !important}
+.w3-theme-l4 {color:#000 !important; background-color:#fffbd8 !important}
+.w3-theme-l3 {color:#000 !important; background-color:#fff7b1 !important}
+.w3-theme-l2 {color:#000 !important; background-color:#fff38b !important}
+.w3-theme-l1 {color:#000 !important; background-color:#ffef64 !important}
+.w3-theme-d1 {color:#000 !important; background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);   !important}
+.w3-theme-d2 {color:#000 !important; background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%); !important}
+.w3-theme-d3 {color:#000 !important; background-color:#ddc700 !important}
+.w3-theme-d4 {color:#fff !important; background-color:#beab00 !important}
+.w3-theme-d5 {color:#fff !important; background-color:#9e8e00 !important}
+/*=====================================================================================================================================================*/
+.w3-theme-facebook {color:#000 !important; background-color:#3B5998   !important}
+.w3-theme-instagram {color:#000 !important; background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%); !important}
+.w3-theme-linkedin {color:#000 !important; background-color:#007bb5 !important}
+.w3-theme-twitter {color:#fff !important; background-color:#55ACEE !important}
+.w3-theme-youtube {color:#fff !important; background-color:#bb0000 !important}
+            
+/*=====================================================================================================================================================*/
+.w3-theme-light {color:#000 !important; background-color:#fffef3 !important}
+.w3-theme-dark {color:#fff !important; background-color:#9e8e00 !important}
+.w3-theme-action {color:#fff !important; background-color:#9e8e00 !important}
+
+.w3-theme {color:#000 !important; background-color:#ffeb3b !important}
+.w3-text-theme {color:#ffeb3b !important}
+.w3-border-theme {border-color:#ffeb3b !important}
+
+.w3-hover-theme:hover {color:#000 !important; background-image: linear-gradient(to top, #50cc7f 0%, #f5d100 100%); !important}
+.w3-hover-text-theme:hover {color:#ffeb3b !important}
+.w3-hover-border-theme:hover {border-color:#ffeb3b !important}    
+    
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: royalblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 1px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  /*float: right;*/
+  height: 40px;
+  font-size: 15px;    
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  height: 55px;
+  text-align: center;    
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  height: 55px;
+  text-align: center;   
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+ text-align: left;    
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+     
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+    
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 0px;
+  background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}    
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+body {
+  font-size: 28px;
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+    
+
+              
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 5s;
+  animation-name: slide;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+} 
+    
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  /*color: #f2f2f2;*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+    }
+    
+s.thicker {
+  font-weight: 900;
+}
+ .bottomrightuni {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.bottomleftdaily {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}    
+ 
+.center {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+    /* loading idea geek  */
+    @-webkit-keyframes preload-show-1 {
+  from {
+    -webkit-transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-show-1 {
+  from {
+    -webkit-transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-hide-1 {
+  to {
+    -webkit-transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-hide-1 {
+  to {
+    -webkit-transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-cycle-1 {
+  5% {
+    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  10%,
+		75% {
+    -webkit-transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  80%,
+		100% {
+    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-cycle-1 {
+  5% {
+    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  10%,
+		75% {
+    -webkit-transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  80%,
+		100% {
+    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-show-2 {
+  from {
+    -webkit-transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-show-2 {
+  from {
+    -webkit-transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-hide-2 {
+  to {
+    -webkit-transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-hide-2 {
+  to {
+    -webkit-transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-cycle-2 {
+  10% {
+    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  15%,
+		70% {
+    -webkit-transform: rotateZ(120deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  75%,
+		100% {
+    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-cycle-2 {
+  10% {
+    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  15%,
+		70% {
+    -webkit-transform: rotateZ(120deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  75%,
+		100% {
+    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-show-3 {
+  from {
+    -webkit-transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-show-3 {
+  from {
+    -webkit-transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-hide-3 {
+  to {
+    -webkit-transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-hide-3 {
+  to {
+    -webkit-transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-cycle-3 {
+  15% {
+    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  20%,
+		65% {
+    -webkit-transform: rotateZ(180deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  70%,
+		100% {
+    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-cycle-3 {
+  15% {
+    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  20%,
+		65% {
+    -webkit-transform: rotateZ(180deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  70%,
+		100% {
+    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-show-4 {
+  from {
+    -webkit-transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-show-4 {
+  from {
+    -webkit-transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-hide-4 {
+  to {
+    -webkit-transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-hide-4 {
+  to {
+    -webkit-transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-cycle-4 {
+  20% {
+    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  25%,
+		60% {
+    -webkit-transform: rotateZ(240deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  65%,
+		100% {
+    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-cycle-4 {
+  20% {
+    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  25%,
+		60% {
+    -webkit-transform: rotateZ(240deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  65%,
+		100% {
+    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-show-5 {
+  from {
+    -webkit-transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-show-5 {
+  from {
+    -webkit-transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-hide-5 {
+  to {
+    -webkit-transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-hide-5 {
+  to {
+    -webkit-transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-cycle-5 {
+  25% {
+    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  30%,
+		55% {
+    -webkit-transform: rotateZ(300deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  60%,
+		100% {
+    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-cycle-5 {
+  25% {
+    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  30%,
+		55% {
+    -webkit-transform: rotateZ(300deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  60%,
+		100% {
+    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-show-6 {
+  from {
+    -webkit-transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-show-6 {
+  from {
+    -webkit-transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-hide-6 {
+  to {
+    -webkit-transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-hide-6 {
+  to {
+    -webkit-transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-cycle-6 {
+  30% {
+    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  35%,
+		50% {
+    -webkit-transform: rotateZ(360deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  55%,
+		100% {
+    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@keyframes preload-cycle-6 {
+  30% {
+    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+  35%,
+		50% {
+    -webkit-transform: rotateZ(360deg) rotateY(0) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(0) rotateX(0deg);
+    border-left-color: #e74c3c;
+  }
+  55%,
+		100% {
+    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+            transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+    border-left-color: #c0392b;
+  }
+}
+@-webkit-keyframes preload-flip {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateZ(-60deg);
+            transform: rotateY(0deg) rotateZ(-60deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg) rotateZ(-60deg);
+            transform: rotateY(360deg) rotateZ(-60deg);
+  }
+}
+@keyframes preload-flip {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateZ(-60deg);
+            transform: rotateY(0deg) rotateZ(-60deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg) rotateZ(-60deg);
+            transform: rotateY(360deg) rotateZ(-60deg);
+  }
+}
+
+/* *=*=*=*=*=*=*=*=*=*=*=*=*=*=*= */
+/* ========= Text Load Start ========= */
+/* *=*=*=*=*=*=*=*=*=*=*=*=*=*=*= */
+
+#page {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0,0,0,0.8);
+  /*background: linear-gradient(to top right, #ffffff 10%, #ffffff 65%, #ffffff 125%);*/
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#phrase_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 150px;
+  overflow: hidden;
+  width: 260px;
+}
+
+#phrases {
+  -webkit-animation: slide-phrases-upward 20s;
+          animation: slide-phrases-upward 20s;
+}
+
+#ighex {
+  bottom: 30px;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+}
+
+@-webkit-keyframes slide-phrases-upward {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  5% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  10% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  15% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  20% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  25% {
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
+  30% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+  35% {
+    -webkit-transform: translateY(-350px);
+            transform: translateY(-350px);
+  }
+  40% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
+  45% {
+    -webkit-transform: translateY(-450px);
+            transform: translateY(-450px);
+  }
+  50% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  55% {
+    -webkit-transform: translateY(-550px);
+            transform: translateY(-550px);
+  }
+  60% {
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
+  }
+  65% {
+    -webkit-transform: translateY(-650px);
+            transform: translateY(-650px);
+  }
+  70% {
+    -webkit-transform: translateY(-700px);
+            transform: translateY(-700px);
+  }
+  75% {
+    -webkit-transform: translateY(-750px);
+            transform: translateY(-750px);
+  }
+  80% {
+    -webkit-transform: translateY(-800px);
+            transform: translateY(-800px);
+  }
+  85% {
+    -webkit-transform: translateY(-850px);
+            transform: translateY(-850px);
+  }
+  90% {
+    -webkit-transform: translateY(-900px);
+            transform: translateY(-900px);
+  }
+  95% {
+    -webkit-transform: translateY(-950px);
+            transform: translateY(-950px);
+  }
+  100% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+  }
+}
+
+@keyframes slide-phrases-upward {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  5% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  10% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  15% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  20% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  25% {
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
+  30% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+  35% {
+    -webkit-transform: translateY(-350px);
+            transform: translateY(-350px);
+  }
+  40% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
+  45% {
+    -webkit-transform: translateY(-450px);
+            transform: translateY(-450px);
+  }
+  50% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  55% {
+    -webkit-transform: translateY(-550px);
+            transform: translateY(-550px);
+  }
+  60% {
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
+  }
+  65% {
+    -webkit-transform: translateY(-650px);
+            transform: translateY(-650px);
+  }
+  70% {
+    -webkit-transform: translateY(-700px);
+            transform: translateY(-700px);
+  }
+  75% {
+    -webkit-transform: translateY(-750px);
+            transform: translateY(-750px);
+  }
+  80% {
+    -webkit-transform: translateY(-800px);
+            transform: translateY(-800px);
+  }
+  85% {
+    -webkit-transform: translateY(-850px);
+            transform: translateY(-850px);
+  }
+  90% {
+    -webkit-transform: translateY(-900px);
+            transform: translateY(-900px);
+  }
+  95% {
+    -webkit-transform: translateY(-950px);
+            transform: translateY(-950px);
+  }
+  100% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+  }
+}
+#loadingCheckCircleSVG-0 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-1 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-2 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-3 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-4 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-5 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-6 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-7 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-8 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-9 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-10 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 8.5s;
+          animation-delay: 8.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-11 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 9.5s;
+          animation-delay: 9.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-12 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 10.5s;
+          animation-delay: 10.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-13 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 11.5s;
+          animation-delay: 11.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-14 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 12.5s;
+          animation-delay: 12.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-15 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 13.5s;
+          animation-delay: 13.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-16 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 14.5s;
+          animation-delay: 14.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-17 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 15.5s;
+          animation-delay: 15.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-18 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 16.5s;
+          animation-delay: 16.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-19 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 17.5s;
+          animation-delay: 17.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-20 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 18.5s;
+          animation-delay: 18.5s;
+  fill: white;
+  opacity: 0;
+}
+
+@-webkit-keyframes fill-to-white {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fill-to-white {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#loadingCheckSVG-0 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+}
+
+#loadingCheckSVG-1 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+#loadingCheckSVG-2 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+#loadingCheckSVG-3 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#loadingCheckSVG-4 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+#loadingCheckSVG-5 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+#loadingCheckSVG-6 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+#loadingCheckSVG-7 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+
+#loadingCheckSVG-8 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
+}
+
+#loadingCheckSVG-9 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
+
+#loadingCheckSVG-10 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 8.5s;
+          animation-delay: 8.5s;
+}
+
+#loadingCheckSVG-11 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 9.5s;
+          animation-delay: 9.5s;
+}
+
+#loadingCheckSVG-12 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 10.5s;
+          animation-delay: 10.5s;
+}
+
+#loadingCheckSVG-13 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 11.5s;
+          animation-delay: 11.5s;
+}
+
+#loadingCheckSVG-14 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 12.5s;
+          animation-delay: 12.5s;
+}
+
+#loadingCheckSVG-15 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 13.5s;
+          animation-delay: 13.5s;
+}
+
+#loadingCheckSVG-16 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 14.5s;
+          animation-delay: 14.5s;
+}
+
+#loadingCheckSVG-17 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 15.5s;
+          animation-delay: 15.5s;
+}
+
+#loadingCheckSVG-18 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 16.5s;
+          animation-delay: 16.5s;
+}
+
+#loadingCheckSVG-19 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 17.5s;
+          animation-delay: 17.5s;
+}
+
+#loadingCheckSVG-20 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 18.5s;
+          animation-delay: 18.5s;
+}
+
+@-webkit-keyframes fill-to-coral {
+  0% {
+    fill: white;
+  }
+  10% {
+    fill: #181A1C;
+  }
+  100% {
+    fill: #181A1C;
+  }
+}
+
+@keyframes fill-to-coral {
+  0% {
+    fill: white;
+  }
+  10% {
+    fill: #181A1C;
+  }
+  100% {
+    fill: #181A1C;
+  }
+}
+
+
+
+/* *=*=*=*=*=*=*=*=*=*=*=*=*=*=*= */
+/* ========= Text Load END ========= */
+/* *=*=*=*=*=*=*=*=*=*=*=*=*=*=*= */
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000000;
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 10000000;
+}
+ 
+ .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        
+    }
+/* Loaded */
+
+
+.preloaded .preloader{
+    opacity: 0;
+	
+	-webkit-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out;
+}
+
+.preloaded #loader-wrapper {
+    visibility: hidden;
+	opacity: 0;
+		
+	-webkit-transition: all 0.3s .3s ease-out; 
+            transition: all 0.3s .3s ease-out;
+
+}
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  display: block;
+  width: 3.75em;
+  height: 4.25em;
+  margin-left: -1.875em;
+  margin-top: -2.125em;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: rotateY(180deg) rotateZ(-60deg);
+          transform: rotateY(180deg) rotateZ(-60deg);
+	z-index: 10010000;
+}
+.preloader .slice {
+  border-top: 1.125em solid transparent;
+  border-right: none;
+  border-bottom: 1em solid transparent;
+  border-left: 1.875em solid #e74c3c;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform-origin: left bottom;
+      -ms-transform-origin: left bottom;
+          transform-origin: left bottom;
+  border-radius: 3px 3px 0 0;
+}
+.preloader .slice:nth-child(1) {
+  -webkit-transform: rotateZ(60deg) rotateY(0deg) rotateX(0);
+          transform: rotateZ(60deg) rotateY(0deg) rotateX(0);
+  -webkit-animation: 0.15s linear 0.82s preload-hide-1 both 1;
+          animation: 0.15s linear 0.82s preload-hide-1 both 1;
+}
+.preloader .slice:nth-child(2) {
+  -webkit-transform: rotateZ(120deg) rotateY(0deg) rotateX(0);
+          transform: rotateZ(120deg) rotateY(0deg) rotateX(0);
+  -webkit-animation: 0.15s linear 0.74s preload-hide-2 both 1;
+          animation: 0.15s linear 0.74s preload-hide-2 both 1;
+}
+.preloader .slice:nth-child(3) {
+  -webkit-transform: rotateZ(180deg) rotateY(0deg) rotateX(0);
+          transform: rotateZ(180deg) rotateY(0deg) rotateX(0);
+  -webkit-animation: 0.15s linear 0.66s preload-hide-3 both 1;
+          animation: 0.15s linear 0.66s preload-hide-3 both 1;
+}
+.preloader .slice:nth-child(4) {
+  -webkit-transform: rotateZ(240deg) rotateY(0deg) rotateX(0);
+          transform: rotateZ(240deg) rotateY(0deg) rotateX(0);
+  -webkit-animation: 0.15s linear 0.58s preload-hide-4 both 1;
+          animation: 0.15s linear 0.58s preload-hide-4 both 1;
+}
+.preloader .slice:nth-child(5) {
+  -webkit-transform: rotateZ(300deg) rotateY(0deg) rotateX(0);
+          transform: rotateZ(300deg) rotateY(0deg) rotateX(0);
+  -webkit-animation: 0.15s linear 0.5s preload-hide-5 both 1;
+          animation: 0.15s linear 0.5s preload-hide-5 both 1;
+}
+.preloader .slice:nth-child(6) {
+  -webkit-transform: rotateZ(360deg) rotateY(0deg) rotateX(0);
+          transform: rotateZ(360deg) rotateY(0deg) rotateX(0);
+  -webkit-animation: 0.15s linear 0.42s preload-hide-6 both 1;
+          animation: 0.15s linear 0.42s preload-hide-6 both 1;
+}
+.preloader.loading {
+  -webkit-animation: 2s preload-flip steps(2) infinite both;
+          animation: 2s preload-flip steps(2) infinite both;
+}
+.preloader.loading .slice:nth-child(1) {
+  -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+          transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+  -webkit-animation: 2s preload-cycle-1 linear infinite both;
+          animation: 2s preload-cycle-1 linear infinite both;
+}
+.preloader.loading .slice:nth-child(2) {
+  -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+          transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+  -webkit-animation: 2s preload-cycle-2 linear infinite both;
+          animation: 2s preload-cycle-2 linear infinite both;
+}
+.preloader.loading .slice:nth-child(3) {
+  -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+          transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+  -webkit-animation: 2s preload-cycle-3 linear infinite both;
+          animation: 2s preload-cycle-3 linear infinite both;
+}
+.preloader.loading .slice:nth-child(4) {
+  -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+          transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+  -webkit-animation: 2s preload-cycle-4 linear infinite both;
+          animation: 2s preload-cycle-4 linear infinite both;
+}
+.preloader.loading .slice:nth-child(5) {
+  -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+          transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+  -webkit-animation: 2s preload-cycle-5 linear infinite both;
+          animation: 2s preload-cycle-5 linear infinite both;
+}
+.preloader.loading .slice:nth-child(6) {
+  -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+          transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+  -webkit-animation: 2s preload-cycle-6 linear infinite both;
+          animation: 2s preload-cycle-6 linear infinite both;
+} 
+    
+    /*search bar*/
+* {
+  box-sizing: border-box;
+}
+*,
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+.wrapper {
+  text-align: center;
+  margin: 5px auto;
+}
+.icon-search-container {
+  display: inline-block;
+  border: 2px solid #d9d9d9;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  transition: width 0.2s ease-out;
+  backface-visibility: hidden;
+}
+.icon-search-container.active {
+  width: 285px;
+}
+.icon-search-container.active .fa-times-circle {
+  opacity: 1;
+}
+.icon-search-container.active .search-input {
+  width: 200px;
+}
+.icon-search-container .fa-search {
+  color: #2980b9;
+  font-size: 30px;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  cursor: pointer;
+}
+.icon-search-container .fa-times-circle {
+  opacity: 0;
+  color: #d9d9d9;
+  font-size: 20px;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  transition: opacity 0.2s ease-out;
+  cursor: pointer;
+}
+.icon-search-container .search-input {
+  position: absolute;
+  cursor: default;
+  left: 45px;
+  top: 6px;
+  width: 0;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  line-height: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: width 0.2s ease-out;
+}    
+ 
+/*circular button*/    
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 12px;}
+.button5 {border-radius: 50%;} 
+    
+/*contact chip*/    
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}  
+    /*course*/
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 10px;
+  /*text-align: center;*/
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /*margin: 4px 2px;*/
+  transition-duration: 0.4s;
+  cursor: pointer;
+  height: 250px;
+  width: 250px;
+  float: left ;    
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+ 
+.vertical-menu {
+  width: 270px;
+  height: 320px;
+  overflow-y: auto;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);;
+  color: white;
+}    
+    
+    .logo {
+  width: 700px;
+  max-width: 100%;
+}
+.logo .co-group path {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: co-animation 1.2s;
+          animation: co-animation 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  stroke-dasharray: 110;
+}
+.logo .bi-group path {
+  opacity: 0;
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+  -webkit-animation: bi-animation 900ms;
+          animation: bi-animation 900ms;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.logo .bi-group path:nth-child(1) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+@-webkit-keyframes co-animation {
+  from {
+    stroke-dashoffset: 110;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  to {
+    stroke-dashoffset: 220;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes co-animation {
+  from {
+    stroke-dashoffset: 110;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  to {
+    stroke-dashoffset: 220;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes bi-animation {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes bi-animation {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.kala
+    {
+        background: black;
+        width: 100%;
+    }
+    
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}    
+  
+.container img {
+  width: 1350px;
+  height: auto;
+}    
+    
+.container .btn {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align:justify-all; 
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);   
+  padding: 14px 40px;
+  margin: 1px 0px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  height: 55px;
+  font-size: 20px;   
+      
+}
+    
+    
+        </style>    
+</style>    
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>    
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>        
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>                
+</head>        
+<body translate="no" class="w3-theme-l5">
+ <div id="loader-wrapper">
+<div id="page">
+<div id="phrase_box">
+<svg width="100%" height="100%">
+<defs>
+<style type="text/css">
+@font-face {
+font-family: "Proxima";
+src: url('');
+}
+</style>
+<mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+<linearGradient id="linearGradient" gradientUnits="objectBoundingBox" x2="0" y2="1">
+<stop stop-color="white" stop-opacity="0" offset="0%" />
+<stop stop-color="white" stop-opacity="1" offset="30%" />
+<stop stop-color="white" stop-opacity="1" offset="70%" />
+<stop stop-color="white" stop-opacity="0" offset="100%" />
+</linearGradient>
+<rect width="100%" height="100%" fill="url(#linearGradient)" />
+</mask>
+</defs>
+<g width="100%" height="100%" style="mask: url(#mask);">
+<g id="phrases"></g>
+</g>
+</svg>
+</div>
+<div id="ighex">
+<div class="preloader loading">
+<span class="slice"></span>
+<span class="slice"></span>
+<span class="slice"></span>
+<span class="slice"></span>
+<span class="slice"></span>
+<span class="slice"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Navbar -->
+<div class="topnav">
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i> </i></a>
+  <a href="Sign-Up.html" class="w3-bar-item w3-light-green"><img src="toolbox_logos/icon-toolbox.png" height ="25px" width="25px"> Home</a>
+  <a href="social.html" class="w3-bar-item  w3-hide-small w3-hover-white">Blogs</a>
+  <a href="members.html" class="w3-bar-item  w3-hide-small w3-hover-white">Mentors</a>
+  <a href="Practicles.html" class="w3-bar-item  w3-hide-small w3-hover-white">Practicals</a>
+  <a href="marketing.html" class="w3-bar-item  w3-hide-small w3-hover-white">Mateials</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+        <s><button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button></s>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="courseslog.html" class="w3-bar-item w3-button">Courses</a>    
+      <a href="paid.html" class="w3-bar-item w3-button">Free Study materials</a>
+      <a href="atharva's.html" class="w3-bar-item w3-button">Full Desciption Periodic Table</a>
+      <a href="3D%20table.html" class="w3-bar-item w3-button">Short Desciption Periodic Table</a>
+    </div>
+  </div>
+  
+     <div class="wrapper">
+<div class="icon-search-container" data-ic-class="search-trigger">
+<span class="fa fa-search"></span>
+<input type="text" class="search-input" data-ic-class="search-input" placeholder="Search" />
+<span class="fa fa-times-circle" data-ic-class="search-clear"></span>
+</div>
+</div>
+ </span>      
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script id="rendered-js">
+$(document).ready(function () {
+
+  var $searchTrigger = $('[data-ic-class="search-trigger"]'),
+  $searchInput = $('[data-ic-class="search-input"]'),
+  $searchClear = $('[data-ic-class="search-clear"]');
+
+  $searchTrigger.click(function () {
+
+    var $this = $('[data-ic-class="search-trigger"]');
+    $this.addClass('active');
+    $searchInput.focus();
+
+  });
+
+  $searchInput.blur(function () {
+
+    if ($searchInput.val().length > 0) {
+
+      return false;
+
+    } else {
+
+      $searchTrigger.removeClass('active');
+
+    }
+
+  });
+
+  $searchClear.click(function () {
+    $searchInput.val('');
+  });
+
+  $searchInput.focus(function () {
+    $searchTrigger.addClass('active');
+  });
+
+});
+    
+    
+    
+    </script>
+    </div>
+</div>
+   <!--Navbar on small screens--> 
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>  -->
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+   
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>  
+<br>    
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="login.html">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>    
+<!--<div class="header">
+  
+  <div class="slideshow-container">
+
+<div class="kala">  
+<div class="mySlides fade">
+  <div class="numbertext">1 /5 </div>
+  <svg class="logo" viewBox="0 0 140 45">
+<g class="co-group">
+<path class="o-path" d="M44.09,17.91A21,21,0,1,1,64.44,43.11H64.07a20.94,20.94,0,0,1-10-2.83" fill="none" stroke="#2ac2e1" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"></path>
+<path class="c-path" d="M41.68,26.23a20.2,20.2,0,0,1-19.94,16.1H21.38A20.2,20.2,0,0,1,7.87,7.59,20.21,20.21,0,0,1,30.1,3.66" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"></path>
+</g>
+<g class="bi-group">
+<path class="i-path" d="M135.118,0.815 C134.521,0.815 134.038,1.298 134.038,1.895 L134.038,42.341 C134.038,42.938 134.521,43.421 135.118,43.421 C135.715,43.421 136.199,42.938 136.199,42.341 L136.199,1.895 C136.199,1.298 135.715,0.815 135.118,0.815 L135.118,0.815 Z" fill="#FFFFFF"></path>
+<path class="b-path" d="M115.461,21.833 C118.922,19.928 121.272,16.248 121.272,12.027 C121.272,5.859 116.251,0.84 110.082,0.84 L93.413,0.84 C92.817,0.84 92.334,1.323 92.334,1.921 C92.334,2.517 92.817,3.001 93.413,3.001 L110.082,3.001 C115.06,3.001 119.111,7.05 119.111,12.027 C119.111,16.839 115.323,20.785 110.573,21.04 L97.583,21.04 C96.987,21.04 96.503,21.523 96.503,22.121 C96.503,22.718 96.987,23.199 97.583,23.199 L111.327,23.199 C116.305,23.199 120.357,27.25 120.358,32.227 C120.358,37.204 116.307,41.252 111.329,41.252 L93.409,41.252 C92.811,41.252 92.329,41.735 92.329,42.332 C92.329,42.929 92.811,43.413 93.409,43.413 L111.329,43.413 C117.499,43.413 122.52,38.395 122.52,32.226 C122.518,27.518 119.592,23.479 115.461,21.833 L115.461,21.833 Z" fill="#FFFFFF"></path>
+</g>
+</svg>
+</div>
+</div>
+      
+<div class="kala">    
+<div class="mySlides fade">
+  <div class="numbertext">1 /5 </div>
+  <svg class="logo" viewBox="0 0 140 45">
+<g class="co-group">
+<path class="o-path" d="M44.09,17.91A21,21,0,1,1,64.44,43.11H64.07a20.94,20.94,0,0,1-10-2.83" fill="none" stroke="#2ac2e1" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"></path>
+<path class="c-path" d="M41.68,26.23a20.2,20.2,0,0,1-19.94,16.1H21.38A20.2,20.2,0,0,1,7.87,7.59,20.21,20.21,0,0,1,30.1,3.66" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"></path>
+</g>
+<g class="bi-group">
+<path class="i-path" d="M135.118,0.815 C134.521,0.815 134.038,1.298 134.038,1.895 L134.038,42.341 C134.038,42.938 134.521,43.421 135.118,43.421 C135.715,43.421 136.199,42.938 136.199,42.341 L136.199,1.895 C136.199,1.298 135.715,0.815 135.118,0.815 L135.118,0.815 Z" fill="#FFFFFF"></path>
+<path class="b-path" d="M115.461,21.833 C118.922,19.928 121.272,16.248 121.272,12.027 C121.272,5.859 116.251,0.84 110.082,0.84 L93.413,0.84 C92.817,0.84 92.334,1.323 92.334,1.921 C92.334,2.517 92.817,3.001 93.413,3.001 L110.082,3.001 C115.06,3.001 119.111,7.05 119.111,12.027 C119.111,16.839 115.323,20.785 110.573,21.04 L97.583,21.04 C96.987,21.04 96.503,21.523 96.503,22.121 C96.503,22.718 96.987,23.199 97.583,23.199 L111.327,23.199 C116.305,23.199 120.357,27.25 120.358,32.227 C120.358,37.204 116.307,41.252 111.329,41.252 L93.409,41.252 C92.811,41.252 92.329,41.735 92.329,42.332 C92.329,42.929 92.811,43.413 93.409,43.413 L111.329,43.413 C117.499,43.413 122.52,38.395 122.52,32.226 C122.518,27.518 119.592,23.479 115.461,21.833 L115.461,21.833 Z" fill="#FFFFFF"></path>
+</g>
+</svg>
+</div>
+</div>
+ 
+<div class="kala"> 
+<div class="mySlides fade">
+  <div class="numbertext">1 /5 </div>
+  <svg class="logo" viewBox="0 0 140 45">
+<g class="co-group">
+<path class="o-path" d="M44.09,17.91A21,21,0,1,1,64.44,43.11H64.07a20.94,20.94,0,0,1-10-2.83" fill="none" stroke="#2ac2e1" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"></path>
+<path class="c-path" d="M41.68,26.23a20.2,20.2,0,0,1-19.94,16.1H21.38A20.2,20.2,0,0,1,7.87,7.59,20.21,20.21,0,0,1,30.1,3.66" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"></path>
+</g>
+<g class="bi-group">
+<path class="i-path" d="M135.118,0.815 C134.521,0.815 134.038,1.298 134.038,1.895 L134.038,42.341 C134.038,42.938 134.521,43.421 135.118,43.421 C135.715,43.421 136.199,42.938 136.199,42.341 L136.199,1.895 C136.199,1.298 135.715,0.815 135.118,0.815 L135.118,0.815 Z" fill="#FFFFFF"></path>
+<path class="b-path" d="M115.461,21.833 C118.922,19.928 121.272,16.248 121.272,12.027 C121.272,5.859 116.251,0.84 110.082,0.84 L93.413,0.84 C92.817,0.84 92.334,1.323 92.334,1.921 C92.334,2.517 92.817,3.001 93.413,3.001 L110.082,3.001 C115.06,3.001 119.111,7.05 119.111,12.027 C119.111,16.839 115.323,20.785 110.573,21.04 L97.583,21.04 C96.987,21.04 96.503,21.523 96.503,22.121 C96.503,22.718 96.987,23.199 97.583,23.199 L111.327,23.199 C116.305,23.199 120.357,27.25 120.358,32.227 C120.358,37.204 116.307,41.252 111.329,41.252 L93.409,41.252 C92.811,41.252 92.329,41.735 92.329,42.332 C92.329,42.929 92.811,43.413 93.409,43.413 L111.329,43.413 C117.499,43.413 122.52,38.395 122.52,32.226 C122.518,27.518 119.592,23.479 115.461,21.833 L115.461,21.833 Z" fill="#FFFFFF"></path>
+</g>
+</svg>
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="stud%20boy.gif" style="width:100%" height="500px">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="2012.jpg" style=" height : 500px">
+  <div class="text">Caption Two</div>
+</div>      
+      
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>    
+</div>
+ #slideshow#
+ 
+</div>-->
+    <div class="container">
+      <img src="octo.jpg" width="1350px"  class="responsive"> 
+  <button  class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>  
+    </div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+     <div class="chip">
+  <img src="person%20(4).png" alt="Person" width="96" height="96">
+  Atharva joshi
+</div>
+ <div class="chip">
+  <img src="person%20(1).png" alt="Person" width="96" height="96">
+  Atharva joshi
+</div>
+ <div class="chip">
+  <img src="person%20(2).png" alt="Person" width="96" height="96">
+  Atharva joshi
+</div>
+ <div class="chip">
+  <img src="person%20(3).png" alt="Person" width="96" height="96">
+  Atharva joshi
+</div> 
+     
+    </div>
+    <div class="card">
+     <br>
+        <button class="button button4"  style="margin: 30px" onclick="openWin()"><img src="brain%20(1).png" style="height: 150px"; width="150px"><a href="courseslog.html"></a><h3>Physics</h3></button>
+        <button class="button button4" style="margin: 30px" onclick="openWin()"><img src="chemistry%20(1).png" style="height: 150px"; width="150px"><a href="courseslog.html"></a><h3>Chemistry</h3></button>
+        <button class="button button4"  style="margin: 30px" onclick="openWin()"><img src="compass.png" style="height: 150px"; width="150px"><a href="courseslog.html"></a><h3>Maths</h3></button>
+        <br>
+        <br>
+        <br>
+         <button class="button button4" style="margin: 30px" onclick="openWin()"><img src="coronavirus.png" style="height: 150px"; width="150px"><a href="courseslog.html"></a><h3>Biology</h3></button>
+          <br>
+
+        <button class="button button4"  style="margin: 30px" onclick="openWin()"><img src="code.png" style="height: 150px"; width="150px"><a href="courseslog.html"></a><h3>Computer(coding)</h3></button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+  </div>    
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="vertical-menu">
+  <a href="#" class="active">Home</a>
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  <a href="#">Link 5</a>
+  <a href="#">Link 6</a>
+  <a href="#">Link 7</a>
+  <a href="#">Link 8</a>
+  <a href="#">Link 9</a>
+  <a href="#">Link 10</a>
+</div>
+    </div>
+      <div class="card">
+      <h5>AD</h5>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p></p>
+    </div>
+    <div class="card">
+        <br>
+        <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+        <center>AD</center>
+        place here
+        <br>
+<br>
+<br> 
+        <br>
+    </div>
+      <div class="card">
+          <center>AD</center>
+        place here
+          <br>
+          <br>
+         </div>  
+  </div>
+</div>
+<br>
+<br>
+    
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <font color= "white"><h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-theme-facebook" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-theme-twitter" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-theme-instagram" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-theme-linkedin w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <a class="w3-button w3-large w3-theme-youtube w3-hide-small" href="javascript:void(0)" title="Youtube"><i class="fa fa-youtube"></i></a>      
+  <a class="w3-button w3-large w3-theme-youtube w3-hide-small" href="javascript:void(0)" title="Quora"><i class="fa fa-quora"></i></a>    
+    <h5><p>Designed by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">  Atharva Joshi</a></p></h5>
+    <h5><p>&#174; All rights Reserved <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">  Catlyst;</a></p></h5>
+    <h5><p>&#169; Calatlyst &#8482;</p></h5>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-green w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="Sign-Up.html"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+     </div> 
+  <!--<div style="position:relative;bottom:100px;z-index:1;" class=" w3-left">        
+     <img src="jetbrains-logos/jetbrains-variant-2.png" height="150px" width="150px"> 
+  </div>-->
+<div style="position:relative;bottom:100px;z-index:20;" class=" w3-left">     
+    <!--hitwebcounter Code START-->
+    <br>
+      <h6>Site Visitor </h6>
+    <a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7535721&style=0008&nbdigits=7&type=page&initCount=0" title="Web Counter" Alt="counter free"   border="0" >
+    </a>   
+    </div>
+ <div style="position:relative;bottom:100px;z-index:20;" class="w3-right">    
+    <!--<div class="bottomrightuni">-->  
+    <!--unique hitwebcounter Code START-->
+    <br><h6>  Unique visitor</h6>
+    <a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7535723&style=0008&nbdigits=7&type=ip&initCount=0" title="Web Counter" Alt="counter free"   border="0" >
+    </a>  
+    </div>              
+    </font>
+</footer>
+
+    
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script id="rendered-js">
+var checkmarkIdPrefix = "loadingCheckSVG-";
+var checkmarkCircleIdPrefix = "loadingCheckCircleSVG-";
+var verticalSpacing = 50;
+
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+$(document).ready(function () {
+
+  setTimeout(function () {
+    $('body').addClass('loaded');
+
+  }, 15000);
+
+});
+function createSVG(tag, properties, opt_children) {
+  var newElement = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  for (prop in properties) {
+    newElement.setAttribute(prop, properties[prop]);
+  }
+  if (opt_children) {
+    opt_children.forEach(function (child) {
+      newElement.appendChild(child);
+    });
+  }
+  return newElement;
+}
+
+function createPhraseSvg(phrase, yOffset) {
+  var text = createSVG("text", {
+    fill: "white",
+    x: 50,
+    y: yOffset,
+    "font-size": 18,
+    "font-family": "Arial" });
+
+  text.appendChild(document.createTextNode(phrase + "..."));
+  return text;
+}
+function createCheckSvg(yOffset, index) {
+  var check = createSVG("polygon", {
+    points: "21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 ",
+    fill: "rgba(255,255,255,1)",
+    id: checkmarkIdPrefix + index });
+
+  var circle_outline = createSVG("path", {
+    d: "M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z",
+    fill: "white" });
+
+  var circle = createSVG("circle", {
+    id: checkmarkCircleIdPrefix + index,
+    fill: "rgba(255,255,255,0)",
+    cx: 16,
+    cy: 16,
+    r: 15 });
+
+  var group = createSVG("g", {
+    transform: "translate(10 " + (yOffset - 20) + ") scale(.9)" },
+  [circle, check, circle_outline]);
+  return group;
+}
+
+function addPhrasesToDocument(phrases) {
+  phrases.forEach(function (phrase, index) {
+    var yOffset = 30 + verticalSpacing * index;
+    document.getElementById("phrases").appendChild(createPhraseSvg(phrase, yOffset));
+    document.getElementById("phrases").appendChild(createCheckSvg(yOffset, index));
+  });
+}
+
+function easeInOut(t) {
+  var period = 200;
+  return (Math.sin(t / period + 100) + 1) / 2;
+}
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  var phrases = shuffleArray(["Connecting to server", "Grabbing objects", "Redndering page", "Resolving IP", "Pondering emptiness", "Considering alternatives", "Shuffling bits", "Waiting for response", "Generating pages", "Simulating workflow", "Empowering humanity", "Being awsome", "Fueling the idea", "Fixing CSS", "Talking to server", "Fetching data"]);
+  addPhrasesToDocument(phrases);
+  var start_time = new Date().getTime();
+  var upward_moving_group = document.getElementById("phrases");
+  upward_moving_group.currentY = 0;
+  var checks = phrases.map(function (_, i) {
+    return { check: document.getElementById(checkmarkIdPrefix + i), circle: document.getElementById(checkmarkCircleIdPrefix + i) };
+  });
+  function animateLoading() {
+    var now = new Date().getTime();
+    upward_moving_group.setAttribute("transform", "translate(0 " + upward_moving_group.currentY + ")");
+    upward_moving_group.currentY -= 1.35 * easeInOut(now);
+    checks.forEach(function (check, i) {
+      var color_change_boundary = -i * verticalSpacing + verticalSpacing + 15;
+      if (upward_moving_group.currentY < color_change_boundary) {
+        var alpha = Math.max(Math.min(1 - (upward_moving_group.currentY - color_change_boundary + 15) / 30, 1), 0);
+        check.circle.setAttribute("fill", "rgba(255, 255, 255, " + alpha + ")");
+        var check_color = [Math.round(255 * (1 - alpha) + 120 * alpha), Math.round(255 * (1 - alpha) + 154 * alpha)];
+        check.check.setAttribute("fill", "rgba(255, " + check_color[0] + "," + check_color[1] + ", 1)");
+      }
+    });
+    if (now - start_time < 30000 && upward_moving_group.currentY > -710) {
+      requestAnimationFrame(animateLoading);
+    }
+  }
+  //animateLoading();
+});
+//# sourceURL=pen.js
+    </script>
+    
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+var myVar;
+
+function myFunction() {
+myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+    
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}  
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 10000); // Change image every 10 seconds
+}    
+</script>
+</body>
+</html>

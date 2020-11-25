@@ -1,0 +1,551 @@
+<!--DOCTYPE html-->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-yellow.css">    
+<style>
+    
+/* THEMES */
+    
+.w3-theme-l5 {color:#000 !important; background-color:#dfe5e8 !important}
+.w3-theme-l4 {color:#000 !important; background-color:#fffbd8 !important}
+.w3-theme-l3 {color:#000 !important; background-color:#fff7b1 !important}
+.w3-theme-l2 {color:#000 !important; background-color:#fff38b !important}
+.w3-theme-l1 {color:#000 !important; background-color:#ffef64 !important}
+.w3-theme-d1 {color:#000 !important; background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);   !important}
+.w3-theme-d2 {color:#000 !important; background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%); !important}
+.w3-theme-d3 {color:#000 !important; background-color:#ddc700 !important}
+.w3-theme-d4 {color:#fff !important; background-color:#beab00 !important}
+.w3-theme-d5 {color:#fff !important; background-color:#9e8e00 !important}
+/*=====================================================================================================================================================*/
+.w3-theme-facebook {color:#000 !important; background-color:#3B5998   !important}
+.w3-theme-instagram {color:#000 !important; background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%); !important}
+.w3-theme-linkedin {color:#000 !important; background-color:#007bb5 !important}
+.w3-theme-twitter {color:#fff !important; background-color:#55ACEE !important}
+.w3-theme-youtube {color:#fff !important; background-color:#bb0000 !important}
+            
+/*=====================================================================================================================================================*/
+.w3-theme-light {color:#000 !important; background-color:#fffef3 !important}
+.w3-theme-dark {color:#fff !important; background-color:#9e8e00 !important}
+.w3-theme-action {color:#fff !important; background-color:#9e8e00 !important}
+
+.w3-theme {color:#000 !important; background-color:#ffeb3b !important}
+.w3-text-theme {color:#ffeb3b !important}
+.w3-border-theme {border-color:#ffeb3b !important}
+
+.w3-hover-theme:hover {color:#000 !important; background-image: linear-gradient(to top, #50cc7f 0%, #f5d100 100%); !important}
+.w3-hover-text-theme:hover {color:#ffeb3b !important}
+.w3-hover-border-theme:hover {border-color:#ffeb3b !important}      
+    
+body {
+  font-family: Arial
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* The browser window */
+.container {
+  border: 3px solid #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Container for columns and the top "toolbar" */
+.row {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+}
+
+.left {
+  width: 15%;
+}
+
+.right {
+  width: 10%;
+}
+
+.middle {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three dots */
+.dot {
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Style the input field */
+input[type=text] {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  margin-top: -8px;
+  height: 25px;
+  color: #666;
+  padding: 5px;
+}
+
+/* Three bars (hamburger menu) */
+.bar {
+  width: 17px;
+  height: 3px;
+  background-color: #aaa;
+  margin: 3px 0;
+  display: block;
+}
+
+/* Page content */
+.content {
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Price</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>    
+<div class="container">
+  <div class="row">
+    <div class="column left">
+      <span class="dot" style="background:#ED594A;"></span>
+      <span class="dot" style="background:#FDD800;"></span>
+      <span class="dot" style="background:#5AC05A;"></span>
+    </div>
+    <div class="column middle">
+      <input type="text" value="Convert Your Values Here">
+    </div>
+    <div class="column right">
+      <div style="float:right">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h3>Browser Window</h3>
+    <p>How to create a detailed browser window look with CSS.</p>
+  </div>
+</div>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>    
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-theme-facebook" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-theme-twitter" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-theme-instagram" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-theme-linkedin w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <a class="w3-button w3-large w3-theme-youtube w3-hide-small" href="javascript:void(0)" title="Youtube"><i class="fa fa-youtube"></i></a>    
+    <h5><p>Designed by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">  Atharva Joshi</a></p></h5>
+    <h5><p>&#174; All rights Reserved <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">  Catlyst;</a></p></h5>
+    <h5><p>&#169; Calatlyst &#8482;</p></h5>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>   
+  </div>
+</footer>
+</body>
+</html> 
+
+<!--DOCTYPE html-->
+<!--
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/feather-icons"></script>
+<style>
+    
+    /* THEMES */
+    
+.w3-theme-l5 {color:#000 !important; background-color:#fffef3 !important}
+.w3-theme-l4 {color:#000 !important; background-color:#fffbd8 !important}
+.w3-theme-l3 {color:#000 !important; background-color:#fff7b1 !important}
+.w3-theme-l2 {color:#000 !important; background-color:#fff38b !important}
+.w3-theme-l1 {color:#000 !important; background-color:#ffef64 !important}
+.w3-theme-d1 {color:#000 !important; background-color:black   !important}
+.w3-theme-d2 {color:#000 !important; background-color:#fde400 !important}
+.w3-theme-d3 {color:#000 !important; background-color:#ddc700 !important}
+.w3-theme-d4 {color:#fff !important; background-color:#beab00 !important}
+.w3-theme-d5 {color:#fff !important; background-color:#9e8e00 !important}
+/*=====================================================================================================================================================*/
+.w3-theme-facebook {color:#000 !important; background-color:#3B5998   !important}
+.w3-theme-instagram {color:#000 !important; background-image: linear-gradient(45DEG,#404DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D); !important}
+.w3-theme-linkedin {color:#000 !important; background-color:#007bb5 !important}
+.w3-theme-twitter {color:#fff !important; background-color:#55ACEE !important}
+.w3-theme-youtube {color:#fff !important; background-color:#bb0000 !important}
+            
+/*=====================================================================================================================================================*/
+.w3-theme-light {color:#000 !important; background-color:#fffef3 !important}
+.w3-theme-dark {color:#fff !important; background-color:#9e8e00 !important}
+.w3-theme-action {color:#fff !important; background-color:#9e8e00 !important}
+
+.w3-theme {color:#000 !important; background-color:#ffeb3b !important}
+.w3-text-theme {color:#ffeb3b !important}
+.w3-border-theme {border-color:#ffeb3b !important}
+
+.w3-hover-theme:hover {color:#000 !important; background-color:#ffeb3b !important}
+.w3-hover-text-theme:hover {color:#ffeb3b !important}
+.w3-hover-border-theme:hover {border-color:#ffeb3b !important}        
+    
+    
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,700,900");
+.btn-wrap {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f3f9;
+  height: 100vh;
+  font-family: 'Muli', Arial, sans-serif;
+}
+
+#dribbble {
+  position: fixed;
+  display: block;
+  right: 70px;
+  bottom: 16px;
+}
+#dribbble svg {
+  display: block;
+  width: 76px;
+  height: 24px;
+  fill: rgba(146, 156, 208, 0.8);
+}
+
+#twitter {
+  position: fixed;
+  display: block;
+  right: 25px;
+  bottom: 11px;
+}
+#twitter svg {
+  width: 24px;
+  height: 24px;
+  fill: rgba(146, 156, 208, 0.8);
+}
+
+.btn-cnt, .cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.concept-wrap, .btn-wrap, .cnt, .lock-on {
+  width: 200px;
+  height: 70px;
+}
+
+.concept-wrap {
+  position: relative;
+  cursor: pointer;
+}
+
+.btn-wrap {
+  cursor: pointer;
+  position: absolute;
+  background: #1462ff;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px -10px #4a74c9;
+  overflow: hidden;
+  transform: translateX(0);
+}
+
+.btn-cnt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex-direction: row;
+  height: 70px;
+  width: 800px;
+  z-index: 9;
+}
+
+.cnt {
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 0 25px;
+}
+.cnt .text {
+  text-align: left;
+  font-size: 1.4em;
+  margin-right: auto;
+  color: #fff;
+}
+.cnt .icon {
+  margin-top: 3px;
+  color: #fff;
+}
+
+.tap {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  background: transparent;
+  opacity: .4;
+  top: calc(50% - 69px);
+  right: -32px;
+  border-radius: 50%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.wave {
+  width: 30px;
+  height: 30px;
+  background: #4784ff;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.wave-act {
+  animation: t-wave 599ms cubic-bezier(0.77, 0.06, 0, 0.99) forwards;
+}
+
+@keyframes t-wave {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    width: 40px;
+    height: 40px;
+  }
+  50% {
+    opacity: .9;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 140px;
+    height: 140px;
+  }
+}
+.lock-on {
+  background: transparent;
+  position: absolute;
+  z-index: 11;
+  cursor: pointer;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class='lock'></div>
+<div class='concept-wrap' id='mainWrap'>
+<div class='tap'>
+<div class='wave'></div>
+</div>
+<div class='btn-wrap' id='btn'>
+<div class='btn-cnt' id='content'>
+<div class='cnt cnt-1'><p class='text'>Expert</p>
+<i class='icon' data-feather="chevron-right"></i>
+</div>
+<div class='cnt cnt-2'><p class='text'>Hard</p>
+<i class='icon' data-feather="chevron-right"></i>
+</div>
+<div class='cnt cnt-3'><p class='text'>Normal</p>
+<i class='icon' data-feather="chevron-right"></i>
+</div>
+<div class='cnt cnt-4'><p class='text'>Easy</p>
+<i class='icon' data-feather="chevron-right"></i>
+</div>
+</div>
+</div>
+</div>
+
+<div class='cs-ref'>
+<a class="cs-dribbble" href="https://dribbble.com/shots/11173301-UI-Button-Selector-Type" target="_blank">
+<div id='svgDribbble'></div>
+</a>
+<a class="cs-twitter" target="_blank" href="https://twitter.com/CosWiSe">
+<div id='svgTwitter'></div>
+</a>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js'></script>
+<script src='https://raw.githubusercontent.com/rdallasgray/bez/master/src/jquery.bez.js'></script>
+<script id="rendered-js">
+// ICONS CALLBACK
+feather.replace();
+
+// SVGs
+$('#svgDribbble').load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/references.html #dribbble');
+$('#svgTwitter').load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/references.html #twitter');
+
+// JQuery Transit http://ricostacruz.com/jquery.transit/
+
+// NEW CODE HERE
+// https://dribbble.com/shots/6937943-Menu-Interaction-Exploration
+
+// Variables
+var btnSz = 200;
+var c = 0;
+var bezierEasing = 'cubic-bezier(.69,-0.49,0,1)';
+var t1 = 299;
+var t2 = 1198;
+
+var bZ2 = 'cubic-bezier(.46,.56,0,.88)';
+
+$('#mainWrap').on('click', function () {
+  c++;
+  console.log(c);
+
+  // Lock
+  $('.lock').addClass('lock-on');
+  setTimeout(function () {
+    $('.lock').removeClass('lock-on');
+  }, 1200);
+
+  // Wave
+  $('.wave').addClass('wave-act');
+  setTimeout(function () {
+    $('.wave').removeClass('wave-act');
+  }, 1000);
+
+  // Move Button
+  setTimeout(function () {
+    $('#btn').transition({
+      x: '+=10px' },
+    289, bZ2, function () {
+      $('#btn').transition({
+        x: '0px' },
+      289, bZ2);
+    });
+  }, 399);
+
+
+  // Move Content
+  setTimeout(function () {
+    if (c <= 2) {
+      $('#content').transition({
+        x: '+=220px' },
+      t1, bezierEasing, function () {
+        $('#content').transition({
+          x: '-=20' },
+        699, 'cubic-bezier(.25,.49,.2,1)');
+      });
+
+    } else if (c == 3) {
+      $('#content').transition({
+        x: '+=220px' },
+      t1, bezierEasing, function () {
+        $('#content').transition({
+          x: '-=20' },
+        699, 'cubic-bezier(.25,.49,.2,1)');
+      });
+      setTimeout(function () {
+        $('.cnt-1').css('order', '4');
+        $('#content').transition({
+          x: '0' },
+        0);
+      }, t2);
+    } else if (c == 4) {
+      $('#content').transition({
+        x: '+=220px' },
+      t1, bezierEasing, function () {
+        $('#content').transition({
+          x: '-=20' },
+        699, 'cubic-bezier(.25,.49,.2,1)');
+      });
+      setTimeout(function () {
+        $('#content').transition({
+          x: '0' },
+        0);
+        $('.cnt-1').css('order', '0');
+      }, t2);
+      c = 0;
+    }
+  }, 399);
+
+
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
+-->
